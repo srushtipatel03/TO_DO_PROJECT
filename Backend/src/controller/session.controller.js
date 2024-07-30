@@ -1,4 +1,4 @@
-const sessionService = require('../services/session.service');
+const sessionService = require("../services/session.service");
 
 exports.getSessions = async (req, res) => {
   try {

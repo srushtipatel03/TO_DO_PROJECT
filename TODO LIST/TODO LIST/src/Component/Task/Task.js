@@ -10,7 +10,7 @@ const Task = () => {
   const fetchTasks = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/todo/get-tasks",
+        "https://to-do-backend-918j.onrender.com/api/todo/get-tasks",
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         }
@@ -37,7 +37,7 @@ const Task = () => {
     onSubmit: async (values, { resetForm }) => {
       try {
         await axios.post(
-          "http://localhost:5000/api/todo/add-task",
+          "https://to-do-backend-918j.onrender.com/api/todo/add-task",
           {
             ...values,
             userId: JSON.parse(
@@ -70,7 +70,7 @@ const Task = () => {
     onSubmit: async (values, { resetForm }) => {
       try {
         await axios.put(
-          `http://localhost:5000/api/todo/update-task/${editTaskId}`,
+          `https://to-do-backend-918j.onrender.com/api/todo/update-task/${editTaskId}`,
           {
             ...values,
             userId: JSON.parse(
@@ -94,7 +94,7 @@ const Task = () => {
 
   const deleteTask = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/todo/delete-task/${id}`, {
+      await axios.delete(`https://to-do-backend-918j.onrender.com/api/todo/delete-task/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       fetchTasks();

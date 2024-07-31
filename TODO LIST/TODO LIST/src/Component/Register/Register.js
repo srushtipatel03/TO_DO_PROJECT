@@ -30,7 +30,7 @@ const Register = () => {
     onSubmit: async (values) => {
       try {
         const response = await axios.post(
-          "http://localhost:5000/api/user/register-user",
+          "https://to-do-backend-918j.onrender.com/api/user/register-user",
           {
             name: values.name,
             email: values.email,
